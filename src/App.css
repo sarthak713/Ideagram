@@ -1,38 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: rgb(72, 55, 222);
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#3b3b7c, #363636);
+    overflow-x: hidden;
+    color: #ffffff;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0em;
+}
+
+@supports (scrollbar-color: #6161aa #363636) {
+    * {
+        scrollbar-color: #6161aa #363636;
+        scrollbar-width: thin;
+    }
+}
+
+a {
+    color: #ffffff;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bubbles {
+    z-index: -2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#b1,
+#b2,
+#b3,
+#b4,
+#b5 {
+    border-radius: 100vw;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    background :#5a5abd43;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#b1 {
+    animation-duration: 20s;
+    height: 150px;
+    width: 150px;
+    animation-name: move1;
 }
 
-.App-link {
-  color: #61dafb;
+#b2 {
+    animation-duration: 25s;
+    animation-name: move2;
+    height: 300px;
+    width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#b3 {
+    animation-duration: 20s;
+    animation-name: move3;
+    height: 200px;
+    width: 200px;
+}
+
+#b4 {
+    animation-duration: 30s;
+    animation-name: move4;
+    height: 150px;
+    width: 150px;
+}
+
+#b5 {
+    height: 250px;
+    width: 250px;
+    animation-duration: 30s;
+    animation-name: move5;
+}
+
+@keyframes move1 {
+    0% {
+        top: 100px;
+        left: 100px;
+    }
+
+    20% {
+        left: 300px;
+        top: 550px;
+    }
+
+    40% {
+        left: 700px;
+        top: 100px;
+    }
+
+    60% {
+        left: 1300px;
+        top: 450px;
+    }
+
+    80% {
+        left: 700px;
+        top: 600px;
+    }
+
+    100% {
+        top: 100px;
+        left: 100px;
+    }
+}
+
+@keyframes move2 {
+    0% {
+        right: 150px;
+        bottom: 150px;
+    }
+
+    20% {
+        right: 400px;
+        bottom: 400px;
+    }
+
+    40% {
+        right: 700px;
+        bottom: -50px;
+    }
+
+    60% {
+        right: 1200px;
+        bottom: 250px;
+    }
+
+    80% {
+        right: 750px;
+        bottom: 500px;
+    }
+
+    100% {
+        right: 150px;
+        bottom: 150px;
+    }
+}
+
+@keyframes move3 {
+    0% {
+        right: 500px;
+        top: 50px;
+    }
+
+    15% {
+        right: 100px;
+        top: 300px;
+    }
+
+    30% {
+        right: 300px;
+        top: 650px;
+    }
+
+    45% {
+        right: 900px;
+        top: 0px;
+    }
+
+    60% {
+        right: 1200px;
+        top: 500px;
+    }
+
+    75% {
+        right: 1400px;
+        top: 150px;
+    }
+
+    90% {
+        right: 900px;
+        top: 0px;
+    }
+
+    100% {
+        right: 500px;
+        top: 50px;
+    }
+}
+
+@keyframes move4 {
+    0% {
+        left: 600px;
+        top: 300px;
+    }
+
+    10% {
+        left: 300px;
+        top: 100px;
+    }
+
+    20% {
+        left: 100px;
+        top: 450px;
+    }
+
+    30% {
+        left: 250px;
+        top: 650px;
+    }
+
+    40% {
+        left: 600px;
+        top: 100px;
+    }
+
+    50% {
+        left: 900px;
+        top: 500px;
+    }
+
+    60% {
+        left: 1200px;
+        top: 200px;
+    }
+
+    70% {
+        left: 1000px;
+        top: 0px;
+    }
+
+    80% {
+        left: 700px;
+        top: 350px;
+    }
+
+    90% {
+        left: 900px;
+        top: 600px;
+    }
+
+    100% {
+        left: 600px;
+        top: 300px;
+    }
+}
+
+@keyframes move5 {
+    0% {
+        left: 600px;
+        bottom: 300px;
+    }
+
+    10% {
+        left: 300px;
+        bottom: 100px;
+    }
+
+    20% {
+        left: 100px;
+        bottom: 450px;
+    }
+
+    30% {
+        left: 250px;
+        bottom: 650px;
+    }
+
+    40% {
+        left: 600px;
+        bottom: 100px;
+    }
+
+    50% {
+        left: 900px;
+        bottom: 500px;
+    }
+
+    60% {
+        left: 1200px;
+        bottom: 200px;
+    }
+
+    70% {
+        left: 1000px;
+        bottom: 0px;
+    }
+
+    80% {
+        left: 700px;
+        bottom: 350px;
+    }
+
+    90% {
+        left: 900px;
+        bottom: 600px;
+    }
+
+    100% {
+        left: 600px;
+        bottom: 300px;
+    }
 }

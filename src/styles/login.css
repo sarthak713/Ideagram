@@ -1,0 +1,28 @@
+#loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 20vh 0;
+}
+
+#loginText {
+    font-size: 25px;
+    margin: 20px;
+    color: #ffffff9c;
+}
+
+#loginBtn {
+    font-size: 20px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+#loginBtn:hover {
+    background: #00000034;
+}

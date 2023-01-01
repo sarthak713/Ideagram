@@ -1,0 +1,64 @@
+#postContainer {
+    border-radius: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    background-color: #7272ef;
+    box-shadow: 5px 5px 10px #1f1f1f;
+}
+
+#postUser {
+    color: #ffffffcd;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #4d4dc1;
+    text-align: left;
+    font-size: 15px;
+}
+
+#postTitle {
+    color: #3a3aff;
+    text-align: left;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
+#postDescription {
+    color: #181818;
+    font-size: 20px;
+    text-align: left;
+    padding: 0px 20px 10px;
+}
+
+#postActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#postLikeBtn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#postLikeBtn:active {
+    transform: scale(0.9);
+}
+
+#postLikeCount {
+    color: #4d4dc1;
+    font-size: 15px;
+}
+
+@media (max-width:600px) {
+    #postContainer {
+        width: 75vw;
+    }
+}
